@@ -12,7 +12,7 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 import java.sql.Connection;
 import java.sql.Statement;
-
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import org.netbeans.lib.awtextra.AbsoluteLayout;
@@ -28,6 +28,8 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        setLocationRelativeTo(null);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
@@ -50,6 +52,7 @@ public class Login extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -126,6 +129,7 @@ public class Login extends javax.swing.JFrame {
                     x=1;
                     if(rs.getString("user_role").equals("admin")){
                         setVisible(false);
+                        new AdminDashboard().setVisible(true);
 
                     }else{
                          setVisible(false);
