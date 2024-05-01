@@ -9,13 +9,20 @@ package pharmacie;
  * @author Amine Aabid
  */
 public class AdminDashboard extends javax.swing.JFrame {
+    private String email="";
 
     /**
      * Creates new form AdminDashboard
      */
     public AdminDashboard() {
         initComponents();
-        setVisible(false);
+       
+    }
+     public AdminDashboard(String tempemail) {
+        initComponents();
+        email=tempemail;
+        System.out.println(email);
+       setLocationRelativeTo(null);
     }
 
     /**
@@ -30,7 +37,6 @@ public class AdminDashboard extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -81,14 +87,6 @@ public class AdminDashboard extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 449, 141));
-
-        jButton6.setBackground(new java.awt.Color(0, 153, 153));
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/updateUser.png"))); // NOI18N
-        jButton6.setText("Update User");
-        jButton6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton6.setOpaque(true);
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 400, 449, 141));
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -165,7 +163,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        new ViewUser().setVisible(true);
+       new ViewUser(email).setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -176,7 +174,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        new Profil().setVisible(true);
+        new Profil(email).setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
@@ -219,7 +217,6 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

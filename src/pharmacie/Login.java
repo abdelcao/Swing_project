@@ -122,29 +122,29 @@ public class Login extends javax.swing.JFrame {
             String email = txtemail.getText();
             String password = txtpass.getText();
             try {
-                String sql = "SELECT * FROM users where user_email ='"+email+"' and user_password='"+password+"'";
+                String sql = "SELECT * FROM users where user_email ='" + email + "' and user_password='" + password + "'";
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(sql);
-                while(rs.next()){
-                    x=1;
-                    if(rs.getString("user_role").equals("admin")){
+                while (rs.next()) {
+                    x = 1;
+                    if (rs.getString("user_role").equals("admin")) {
                         setVisible(false);
-                        new AdminDashboard().setVisible(true);
+                        new AdminDashboard(email).setVisible(true);
 
-                    }else{
-                         setVisible(false);
+                    } else {
+                        setVisible(false);
+                        new PharmacienDash().setVisible(true);
+
                     }
                 }
-                if(x==0){
-                    JOptionPane.showMessageDialog(null, "email or password are rong");
+                if (x == 0) {
+                    JOptionPane.showMessageDialog(null, "email or password are wrong");
                 }
-
-
 
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-            
+
         } else {
             JOptionPane.showMessageDialog(null, "Connection failed", "Error", JOptionPane.ERROR_MESSAGE);
         }
