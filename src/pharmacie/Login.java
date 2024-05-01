@@ -132,11 +132,12 @@ public class Login extends javax.swing.JFrame {
                         new AdminDashboard().setVisible(true);
 
                     }else{
-                         setVisible(false);
+                        setVisible(false);
+                        new PharmacienDash().setVisible(true);
                     }
                 }
                 if(x==0){
-                    JOptionPane.showMessageDialog(null, "email or password are rong");
+                    JOptionPane.showMessageDialog(null, "incorrect email or password");
                 }
 
 
