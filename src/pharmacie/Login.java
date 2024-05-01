@@ -40,7 +40,8 @@ public class Login extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -122,7 +123,8 @@ public class Login extends javax.swing.JFrame {
             String email = txtemail.getText();
             String password = txtpass.getText();
             try {
-                String sql = "SELECT * FROM users where user_email ='" + email + "' and user_password='" + password + "'";
+                String sql = "SELECT * FROM users where user_email ='" + email + "' and user_password='" + password
+                        + "'";
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(sql);
                 while (rs.next()) {
@@ -134,11 +136,10 @@ public class Login extends javax.swing.JFrame {
                     } else {
                         setVisible(false);
                         new PharmacienDash().setVisible(true);
-
                     }
                 }
                 if (x == 0) {
-                    JOptionPane.showMessageDialog(null, "email or password are wrong");
+                    JOptionPane.showMessageDialog(null, "incorrect email or password");
                 }
 
             } catch (SQLException e) {
