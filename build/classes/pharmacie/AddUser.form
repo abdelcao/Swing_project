@@ -101,7 +101,6 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtUsername" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="iconLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -109,9 +108,12 @@
                       <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ComboUserRole" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ComboUserRole" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="iconLabel" min="-2" pref="23" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -288,6 +290,9 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtEmailKeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtAdress">
           <Properties>

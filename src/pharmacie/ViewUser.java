@@ -3,13 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package pharmacie;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import java.sql.*;
+import javax.swing.table.TableModel;
 
-/**
- *
- * @author Amine Aabid
- */
 public class ViewUser extends javax.swing.JFrame {
-    private String username="";
+  
+    private String email="";
     
 
     /**
@@ -19,9 +20,10 @@ public class ViewUser extends javax.swing.JFrame {
         initComponents();
          setLocationRelativeTo(null);
     }
-    public ViewUser(String tempUsername){
+    public ViewUser(String tempemail){
         initComponents();
-        username=tempUsername;
+        
+        email=tempemail;
         setLocationRelativeTo(null);
     }
 
@@ -81,6 +83,11 @@ public class ViewUser extends javax.swing.JFrame {
                 "ID", "Name", "Username", "Role", "Phone Number", "Email", "Password"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -129,8 +136,51 @@ public class ViewUser extends javax.swing.JFrame {
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         // TODO add your handling code here:
+         DefaultTableModel model =(DefaultTableModel) jTable1.getModel();
+         
+        try{
+              Connection con = DatabaseConnection.connect();
+              Statement st =con.createStatement();
+              ResultSet rs= st.executeQuery("select * from users");
+              while(rs.next()){
+                  model.addRow(new Object[]{ rs.getString("user_id"),  rs.getString("name"),rs.getString("user_name"), rs.getString("user_role"), rs.getString("user_number"),rs.getString("user_email"),rs.getString("user_password")
+                  
+                   
+              });}
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
         
     }//GEN-LAST:event_formComponentShown
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        int index =jTable1.getSelectedRow();
+        TableModel model = jTable1.getModel();
+        String id =model.getValueAt(index,0).toString();
+        String emailTable =model.getValueAt(index,5).toString();
+        if(email.equals(emailTable)){
+            JOptionPane.showMessageDialog(null, "You can't delete your own account ");
+            
+        }else{
+            int a =  JOptionPane.showConfirmDialog(null, "Do you want to delete this user ","select",JOptionPane.YES_NO_OPTION);
+            if (a==0){
+                try{
+                   Connection con = DatabaseConnection.connect(); 
+                   PreparedStatement ps=con.prepareStatement("delete from users where user_id=?");
+                   ps.setString(1, id);
+                   ps.executeUpdate();
+                      JOptionPane.showMessageDialog(null, "user successfully deleted ");
+                      setVisible(false);
+                      new ViewUser(email).setVisible(true);
+                   
+                }
+                catch(Exception e){
+                       JOptionPane.showMessageDialog(null, e);
+                }
+            }
+        }
+    }//GEN-LAST:event_jTable1MouseClicked
 
     /**
      * @param args the command line arguments
