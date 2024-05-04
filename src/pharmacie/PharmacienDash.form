@@ -185,7 +185,11 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+<<<<<<< HEAD
+              <AbsoluteConstraints x="950" y="0" width="245" height="90"/>
+=======
               <AbsoluteConstraints x="750" y="10" width="245" height="88"/>
+>>>>>>> c4bdf9fd962cc258fbb0cf93c4b7157c067fa670
             </Constraint>
           </Constraints>
         </Component>

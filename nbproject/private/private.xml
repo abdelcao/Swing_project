@@ -3,9 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+            <file>file:/C:/Users/Amine%20Aabid/Documents/NetBeansProjects/Nouveau%20dossier/Swing_project/src/pharmacie/AddUser.java</file>
+            <file>file:/C:/Users/Amine%20Aabid/Documents/NetBeansProjects/Nouveau%20dossier/Swing_project/src/pharmacie/Login.java</file>
+            <file>file:/C:/Users/Amine%20Aabid/Documents/NetBeansProjects/Nouveau%20dossier/Swing_project/src/pharmacie/PharmacienDash.java</file>
+            <file>file:/C:/Users/Amine%20Aabid/Documents/NetBeansProjects/Nouveau%20dossier/Swing_project/src/pharmacie/DatabaseConnection.java</file>
+            <file>file:/C:/Users/Amine%20Aabid/Documents/NetBeansProjects/Nouveau%20dossier/Swing_project/src/pharmacie/ViewUser.java</file>
+            <file>file:/C:/Users/Amine%20Aabid/Documents/NetBeansProjects/Nouveau%20dossier/Swing_project/src/pharmacie/AdminDashboard.java</file>
+            <file>file:/C:/Users/Amine%20Aabid/Documents/NetBeansProjects/Nouveau%20dossier/Swing_project/src/pharmacie/Profil.java</file>
+=======
             <file>file:/C:/Users/abdelhamid/Documents/NetBeansProjects/Swing_project/src/pharmacie/Viewmedicine.java</file>
             <file>file:/C:/Users/abdelhamid/Documents/NetBeansProjects/Swing_project/src/pharmacie/PharmacienDash.java</file>
+<<<<<<< HEAD
             <file>file:/C:/Users/abdelhamid/Documents/NetBeansProjects/Swing_project/src/pharmacie/UpdateMedicine.java</file>
+=======
+>>>>>>> c4bdf9fd962cc258fbb0cf93c4b7157c067fa670
+>>>>>>> 67196e2724d2a67fd28f5ebe71c5a7b762e2569d
         </group>
     </open-files>
 </project-private>

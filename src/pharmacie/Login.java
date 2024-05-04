@@ -40,7 +40,8 @@ public class Login extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -122,30 +123,29 @@ public class Login extends javax.swing.JFrame {
             String email = txtemail.getText();
             String password = txtpass.getText();
             try {
-                String sql = "SELECT * FROM users where user_email ='"+email+"' and user_password='"+password+"'";
+                String sql = "SELECT * FROM users where user_email ='" + email + "' and user_password='" + password
+                        + "'";
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(sql);
-                while(rs.next()){
-                    x=1;
-                    if(rs.getString("user_role").equals("admin")){
+                while (rs.next()) {
+                    x = 1;
+                    if (rs.getString("user_role").equals("admin")) {
                         setVisible(false);
-                        new AdminDashboard().setVisible(true);
+                        new AdminDashboard(email).setVisible(true);
 
-                    }else{
+                    } else {
                         setVisible(false);
                         new PharmacienDash(email).setVisible(true);
                     }
                 }
-                if(x==0){
+                if (x == 0) {
                     JOptionPane.showMessageDialog(null, "incorrect email or password");
                 }
-
-
 
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-            
+
         } else {
             JOptionPane.showMessageDialog(null, "Connection failed", "Error", JOptionPane.ERROR_MESSAGE);
         }

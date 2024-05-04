@@ -131,7 +131,11 @@ public class PharmacienDash extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 0, 245, 90));
+=======
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, 245, 88));
+>>>>>>> c4bdf9fd962cc258fbb0cf93c4b7157c067fa670
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 1280, 110));
 

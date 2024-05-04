@@ -150,6 +150,11 @@ public class AddUser extends javax.swing.JFrame {
         });
 
         txtEmail.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtEmail.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtEmailKeyReleased(evt);
+            }
+        });
 
         txtAdress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
@@ -209,16 +214,17 @@ public class AddUser extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(iconLabel))
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel1))
                 .addGap(17, 17, 17)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ComboUserRole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ComboUserRole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(iconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -266,31 +272,7 @@ public class AddUser extends javax.swing.JFrame {
     }//GEN-LAST:event_ComboUserRoleActionPerformed
 
     private void txtUsernameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUsernameKeyReleased
-        // TODO add your handling code here:
-         String usernam=txtUsername.getText();
-        if(!usernam.equals(""))
-        {iconLabel.setVisible(true);
-        iconLabel.setIcon(new ImageIcon("src\\images\\yes.png"));
-        iconLabel.setText("");
-        checkUsername=0;
-         try{
-            Connection con = DatabaseConnection.connect();
-            
-              String sql = "select * from users where user_name='"+usernam+ "'";
-                Statement stmt = con.createStatement();
-                ResultSet rs = stmt.executeQuery(sql);
-             
-             while(rs.next()){
-                 checkUsername=1;
-                 iconLabel.setIcon(new ImageIcon("src\\images\\no.png"));
-                 iconLabel.setText("");
-             }
-         }  catch(Exception e){
-             JOptionPane.showMessageDialog(null, e);
-         }
-        } else{
-            iconLabel.setVisible(false);
-        }
+    
     }//GEN-LAST:event_txtUsernameKeyReleased
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -323,7 +305,7 @@ public class AddUser extends javax.swing.JFrame {
         else if(username.equals("")){
               JOptionPane.showMessageDialog(null, "Username field is required.");
         }  else if(checkUsername ==1){
-              JOptionPane.showMessageDialog(null, "Username already exist.");
+              JOptionPane.showMessageDialog(null, "User already exist.");
         } else if(password.equals("")){
               JOptionPane.showMessageDialog(null, "Password field is required..");
         } else if(adress.equals("")){
@@ -341,7 +323,7 @@ public class AddUser extends javax.swing.JFrame {
                     ps.setString(6,adress);
                      ps.setString(7,name);
                       
-                       ps.setString(7,adress);
+                   
                         ps.executeUpdate();
                        JOptionPane.showMessageDialog(null, "User Added Successfully"); 
                        setVisible(false);
@@ -352,6 +334,35 @@ public class AddUser extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtEmailKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEmailKeyReleased
+        // TODO add your handling code here:
+            // TODO add your handling code here:
+         String useremail= txtEmail.getText();
+        if(!useremail.equals(""))
+        {iconLabel.setVisible(true);
+        iconLabel.setIcon(new ImageIcon("src\\images\\yes.png"));
+        iconLabel.setText("");
+        checkUsername=0;
+         try{
+            Connection con = DatabaseConnection.connect();
+            
+              String sql = "select * from users where user_email='"+useremail+ "'";
+                Statement stmt = con.createStatement();
+                ResultSet rs = stmt.executeQuery(sql);
+             
+             while(rs.next()){
+                 checkUsername=1;
+                 iconLabel.setIcon(new ImageIcon("src\\images\\no.png"));
+                 iconLabel.setText("");
+             }
+         }  catch(Exception e){
+             JOptionPane.showMessageDialog(null, e);
+         }
+        } else{
+            iconLabel.setVisible(false);
+        }
+    }//GEN-LAST:event_txtEmailKeyReleased
 
     /**
      * @param args the command line arguments
