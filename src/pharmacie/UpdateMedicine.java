@@ -21,7 +21,7 @@ public class UpdateMedicine extends javax.swing.JFrame {
      
     public UpdateMedicine() {
         initComponents();
-        setLocationRelativeTo(null);
+       setLocationRelativeTo(null);
     }
 
     /**
@@ -174,7 +174,6 @@ public class UpdateMedicine extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(0, 153, 153));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/updateUser_1.png"))); // NOI18N
         jButton3.setText("UPDATE");
         jButton3.setBorder(null);
         jButton3.setOpaque(true);
@@ -297,6 +296,7 @@ public class UpdateMedicine extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null,"the medicine has been Updated");   
                 
                 txtmedid.setText("");
+                txtmedid.setEditable(true);
                 txtname.setText("");
                 txtcompany.setText("");
                 txtprice.setText("");
