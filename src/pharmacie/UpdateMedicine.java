@@ -50,7 +50,7 @@ public class UpdateMedicine extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         txtprice = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -82,7 +82,7 @@ public class UpdateMedicine extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton1)
@@ -92,7 +92,7 @@ public class UpdateMedicine extends javax.swing.JFrame {
                         .addGap(25, 25, 25))))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 100));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 80));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Medicine ID");
@@ -119,7 +119,7 @@ public class UpdateMedicine extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Name");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 217, 58, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 58, -1));
 
         txtname.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         txtname.addActionListener(new java.awt.event.ActionListener() {
@@ -127,11 +127,11 @@ public class UpdateMedicine extends javax.swing.JFrame {
                 txtnameActionPerformed(evt);
             }
         });
-        getContentPane().add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 244, 280, 40));
+        getContentPane().add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 280, 40));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setText("Cimpany Name");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 302, -1, -1));
+        jLabel4.setText("Company Name");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
         txtcompany.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         txtcompany.addActionListener(new java.awt.event.ActionListener() {
@@ -139,11 +139,11 @@ public class UpdateMedicine extends javax.swing.JFrame {
                 txtcompanyActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcompany, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 328, 280, 40));
+        getContentPane().add(txtcompany, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 280, 40));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Quantity");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 394, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
 
         txtquantity.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         txtquantity.addActionListener(new java.awt.event.ActionListener() {
@@ -151,11 +151,11 @@ public class UpdateMedicine extends javax.swing.JFrame {
                 txtquantityActionPerformed(evt);
             }
         });
-        getContentPane().add(txtquantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 421, 280, 40));
+        getContentPane().add(txtquantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 280, 40));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("Add Quantity");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 500, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 430, -1, 60));
 
         txtaddq.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         txtaddq.addActionListener(new java.awt.event.ActionListener() {
@@ -163,17 +163,18 @@ public class UpdateMedicine extends javax.swing.JFrame {
                 txtaddqActionPerformed(evt);
             }
         });
-        getContentPane().add(txtaddq, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 490, 70, 36));
+        getContentPane().add(txtaddq, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 440, 70, 36));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setText("Price Per Unit");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, -1, -1));
 
         txtprice.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        getContentPane().add(txtprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, 300, 40));
+        getContentPane().add(txtprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, 300, 40));
 
-        jButton3.setBackground(new java.awt.Color(0, 255, 204));
+        jButton3.setBackground(new java.awt.Color(0, 153, 153));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/updateUser_1.png"))); // NOI18N
         jButton3.setText("UPDATE");
         jButton3.setBorder(null);
         jButton3.setOpaque(true);
@@ -182,10 +183,22 @@ public class UpdateMedicine extends javax.swing.JFrame {
                 jButton3MouseClicked(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 320, -1, 45));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(678, 260, 110, 40));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/all_pages_background.png"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 850, 640));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 845, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 503, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -281,7 +294,14 @@ public class UpdateMedicine extends javax.swing.JFrame {
                 st.setString(4, price);  
                 st.setString(5, uniqueid); 
                 st.executeUpdate();
-                JOptionPane.showMessageDialog(null,"the medicine has been Updated");            
+                JOptionPane.showMessageDialog(null,"the medicine has been Updated");   
+                
+                txtmedid.setText("");
+                txtname.setText("");
+                txtcompany.setText("");
+                txtprice.setText("");
+                txtquantity.setText("");
+                txtaddq.setText("") ;       
                 
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, e);
@@ -337,8 +357,8 @@ public class UpdateMedicine extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField txtaddq;
     private javax.swing.JTextField txtcompany;
     private javax.swing.JTextField txtmedid;

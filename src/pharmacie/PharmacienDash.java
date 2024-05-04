@@ -131,11 +131,7 @@ public class PharmacienDash extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 0, 245, 90));
-=======
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, 245, 88));
->>>>>>> c4bdf9fd962cc258fbb0cf93c4b7157c067fa670
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 1280, 110));
 
@@ -252,7 +248,7 @@ public class PharmacienDash extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        new Profil().setVisible(true);
+        new Profil(email).setVisible(true);
     }// GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton7ActionPerformed

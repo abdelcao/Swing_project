@@ -28,7 +28,7 @@ public class Profil extends javax.swing.JFrame {
     public Profil(String tempemail) {
         initComponents();
         email=tempemail;
-         setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
