@@ -133,7 +133,7 @@ public class Login extends javax.swing.JFrame {
 
                     }else{
                         setVisible(false);
-                        new PharmacienDash().setVisible(true);
+                        new PharmacienDash(email).setVisible(true);
                     }
                 }
                 if(x==0){

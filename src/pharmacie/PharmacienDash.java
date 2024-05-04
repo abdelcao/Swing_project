@@ -9,7 +9,7 @@ package pharmacie;
  * @author Abdelhamid
  */
 public class PharmacienDash extends javax.swing.JFrame {
-
+    private String email="";
     /**
      * Creates new form AdminDashboard
      */
@@ -17,6 +17,12 @@ public class PharmacienDash extends javax.swing.JFrame {
         initComponents();
         setVisible(false);
         setLocationRelativeTo(null);
+    }
+    public PharmacienDash(String em) {
+        initComponents();
+        setVisible(false);
+        setLocationRelativeTo(null);
+        email=em;
     }
 
     /**
@@ -102,6 +108,11 @@ public class PharmacienDash extends javax.swing.JFrame {
                 jButton6MouseClicked(evt);
             }
         });
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 550, 449, 141));
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
@@ -184,8 +195,8 @@ public class PharmacienDash extends javax.swing.JFrame {
 
         jButton8.setBackground(new java.awt.Color(0, 153, 153));
         jButton8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/exit.png"))); // NOI18N
-        jButton8.setText("Exit");
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sellMedicine.png"))); // NOI18N
+        jButton8.setText("sell Medicine");
         jButton8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton8.setOpaque(true);
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -211,6 +222,14 @@ public class PharmacienDash extends javax.swing.JFrame {
         new UpdateMedicine().setVisible(true);
     }//GEN-LAST:event_jButton5MouseClicked
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        new SellMedecine().setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        new SellMedecine(email).setVisible(true);
+    }//GEN-LAST:event_jButton8MouseClicked
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         // new AddUser().setVisible(true);
@@ -235,10 +254,6 @@ public class PharmacienDash extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
     }// GEN-LAST:event_jButton7ActionPerformed
-
-    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jButton8MouseClicked
-        
-    }// GEN-LAST:event_jButton8MouseClicked
 
     /**
      * @param args the command line arguments
