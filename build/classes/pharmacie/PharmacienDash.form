@@ -46,11 +46,7 @@
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Events>
-<<<<<<< HEAD
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
-=======
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseClicked"/>
->>>>>>> c4bdf9fd962cc258fbb0cf93c4b7157c067fa670
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -82,11 +78,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-<<<<<<< HEAD
-          <AbsoluteConstraints x="890" y="150" width="449" height="141"/>
-=======
           <AbsoluteConstraints x="870" y="150" width="449" height="141"/>
->>>>>>> c4bdf9fd962cc258fbb0cf93c4b7157c067fa670
         </Constraint>
       </Constraints>
     </Component>
@@ -101,11 +93,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/images/updateUser.png"/>
         </Property>
-<<<<<<< HEAD
-        <Property name="text" type="java.lang.String" value="update Bills"/>
-=======
         <Property name="text" type="java.lang.String" value="Update Medicine"/>
->>>>>>> c4bdf9fd962cc258fbb0cf93c4b7157c067fa670
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
             <BevelBorder/>
@@ -114,19 +102,12 @@
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Events>
-<<<<<<< HEAD
-=======
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton5MouseClicked"/>
->>>>>>> c4bdf9fd962cc258fbb0cf93c4b7157c067fa670
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-<<<<<<< HEAD
-          <AbsoluteConstraints x="330" y="570" width="449" height="141"/>
-=======
           <AbsoluteConstraints x="330" y="550" width="449" height="141"/>
->>>>>>> c4bdf9fd962cc258fbb0cf93c4b7157c067fa670
         </Constraint>
       </Constraints>
     </Component>
@@ -139,15 +120,9 @@
           <Font name="Segoe UI" size="24" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-<<<<<<< HEAD
-          <Image iconType="3" name="/images/exit.png"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Exit"/>
-=======
           <Image iconType="3" name="/images/addMedicine.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Add medicine"/>
->>>>>>> c4bdf9fd962cc258fbb0cf93c4b7157c067fa670
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
             <BevelBorder/>
@@ -160,11 +135,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-<<<<<<< HEAD
-          <AbsoluteConstraints x="890" y="360" width="449" height="141"/>
-=======
           <AbsoluteConstraints x="870" y="550" width="449" height="141"/>
->>>>>>> c4bdf9fd962cc258fbb0cf93c4b7157c067fa670
         </Constraint>
       </Constraints>
     </Component>
@@ -176,11 +147,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-<<<<<<< HEAD
-          <AbsoluteConstraints x="300" y="0" width="1280" height="100"/>
-=======
           <AbsoluteConstraints x="300" y="0" width="1280" height="110"/>
->>>>>>> c4bdf9fd962cc258fbb0cf93c4b7157c067fa670
         </Constraint>
       </Constraints>
 
@@ -329,9 +296,6 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-<<<<<<< HEAD
-          <AbsoluteConstraints x="330" y="360" width="449" height="141"/>
-=======
           <AbsoluteConstraints x="330" y="350" width="449" height="141"/>
         </Constraint>
       </Constraints>
@@ -361,7 +325,6 @@
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="870" y="350" width="449" height="141"/>
->>>>>>> c4bdf9fd962cc258fbb0cf93c4b7157c067fa670
         </Constraint>
       </Constraints>
     </Component>
