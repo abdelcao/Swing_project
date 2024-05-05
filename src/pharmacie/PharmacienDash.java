@@ -9,14 +9,20 @@ package pharmacie;
  * @author Abdelhamid
  */
 public class PharmacienDash extends javax.swing.JFrame {
+    private String email = "";
 
     /**
      * Creates new form AdminDashboard
      */
     public PharmacienDash() {
         initComponents();
-        setVisible(false);
+    }
+
+    public PharmacienDash(String em) {
+        initComponents();
+        email = em;
         setLocationRelativeTo(null);
+
     }
 
     /**
@@ -41,7 +47,6 @@ public class PharmacienDash extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -76,7 +81,7 @@ public class PharmacienDash extends javax.swing.JFrame {
 
         jButton5.setBackground(new java.awt.Color(0, 153, 153));
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/updateUser.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/hamid.png"))); // NOI18N
         jButton5.setText("Update Medicine");
         jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton5.setOpaque(true);
@@ -90,7 +95,7 @@ public class PharmacienDash extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 550, 449, 141));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, 449, 141));
 
         jButton6.setBackground(new java.awt.Color(0, 153, 153));
         jButton6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -103,7 +108,7 @@ public class PharmacienDash extends javax.swing.JFrame {
                 jButton6MouseClicked(evt);
             }
         });
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 550, 449, 141));
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 550, 449, 141));
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -121,7 +126,7 @@ public class PharmacienDash extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 0, 245, 90));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, 245, 88));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 1280, 110));
 
@@ -172,23 +177,10 @@ public class PharmacienDash extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 840));
 
-        jButton7.setBackground(new java.awt.Color(0, 153, 153));
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/viewBill.png"))); // NOI18N
-        jButton7.setText("View Bills");
-        jButton7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton7.setOpaque(true);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, 449, 141));
-
         jButton8.setBackground(new java.awt.Color(0, 153, 153));
         jButton8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/exit.png"))); // NOI18N
-        jButton8.setText("Exit");
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sellMedicine.png"))); // NOI18N
+        jButton8.setText("Sell Medicine");
         jButton8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton8.setOpaque(true);
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -232,7 +224,7 @@ public class PharmacienDash extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        new Profil().setVisible(true);
+        new Profil(email).setVisible(true);
     }// GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton7ActionPerformed
@@ -240,7 +232,7 @@ public class PharmacienDash extends javax.swing.JFrame {
     }// GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jButton8MouseClicked
-
+        new SellMedecine().setVisible(true);
     }// GEN-LAST:event_jButton8MouseClicked
 
     /**
@@ -283,7 +275,6 @@ public class PharmacienDash extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
