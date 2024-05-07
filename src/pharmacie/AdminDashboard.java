@@ -104,9 +104,9 @@ public class AdminDashboard extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 6, 245, 88));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 10, 245, 88));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 1280, 100));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 1280, 120));
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
 
