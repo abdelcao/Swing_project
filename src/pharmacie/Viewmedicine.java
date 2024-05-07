@@ -122,9 +122,10 @@ public class Viewmedicine extends javax.swing.JFrame {
             while (rs.next()) {
                 model.addRow(new Object[] { rs.getString("id"),
                         rs.getString("med_id"),
-                        rs.getString("med_name"),
-                        rs.getString("med_comp_name"),
+                        rs.getString("med_name"), 
                         rs.getString("med_quantity"),
+                        rs.getString("med_comp_name"),
+                      
                         rs.getString("med_price"), });
 
             }
