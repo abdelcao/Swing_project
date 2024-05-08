@@ -123,8 +123,8 @@ public class Viewmedicine extends javax.swing.JFrame {
                 model.addRow(new Object[] { rs.getString("id"),
                         rs.getString("med_id"),
                         rs.getString("med_name"),
-                        rs.getString("med_comp_name"),
                         rs.getString("med_quantity"),
+                        rs.getString("med_comp_name"),
                         rs.getString("med_price"), });
 
             }
@@ -146,10 +146,9 @@ public class Viewmedicine extends javax.swing.JFrame {
                 PreparedStatement st = conn.prepareStatement("delete from medicine where id = ?");
                 st.setString(1, id);
                 st.executeUpdate();
-                JOptionPane.showMessageDialog(null,"medicine has been deleted");
+                JOptionPane.showMessageDialog(null, "medicine has been deleted");
                 setVisible(false);
                 new Viewmedicine().setVisible(true);
-
 
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, e);
