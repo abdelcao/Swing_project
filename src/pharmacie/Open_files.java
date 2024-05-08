@@ -8,9 +8,9 @@ import javax.swing.JOptionPane;
 public class Open_files {
     public static void openbyid(String id) {
         try {
-            if (new File("C:\\Users\\abdelhamid\\Desktop\\Facture\\"+id).exists()) {
+            if (new File("C:\\Users\\Amine Aabid\\Desktop\\Facture"+id).exists()) {
                 try {
-                    String filePath = "C:\\Users\\abdelhamid\\Desktop\\Facture\\" + id;
+                    String filePath = "C:\\Users\\Amine Aabid\\Desktop\\Facture" + id;
                     Process p = Runtime.getRuntime().exec(new String[] {
                             "rundll32", "url.dll", "FileProtocolHandler", filePath
                     });
