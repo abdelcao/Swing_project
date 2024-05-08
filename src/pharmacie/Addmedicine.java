@@ -214,8 +214,9 @@ public class Addmedicine extends javax.swing.JFrame {
                     ps.setString(5, prix);
 
                     ps.executeUpdate();
-                    setVisible(true);
+                    
                     JOptionPane.showMessageDialog(null, "Medicine Added");
+                    setVisible(false);
                     new Addmedicine().setVisible(true);
                 } catch (SQLException e) {
                     JOptionPane.showMessageDialog(null, e);

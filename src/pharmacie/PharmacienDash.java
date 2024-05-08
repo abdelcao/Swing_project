@@ -9,8 +9,12 @@ package pharmacie;
  * @author Abdelhamid
  */
 public class PharmacienDash extends javax.swing.JFrame {
+<<<<<<< HEAD
     private String email = "";
 
+=======
+    private String email="";
+>>>>>>> fe8da9663614721aaddd875eb826e7226478c5d0
     /**
      * Creates new form AdminDashboard
      */
@@ -20,9 +24,15 @@ public class PharmacienDash extends javax.swing.JFrame {
 
     public PharmacienDash(String em) {
         initComponents();
+<<<<<<< HEAD
         email = em;
         setLocationRelativeTo(null);
 
+=======
+        email=em;
+        setLocationRelativeTo(null);
+        
+>>>>>>> fe8da9663614721aaddd875eb826e7226478c5d0
     }
 
     /**
@@ -232,7 +242,11 @@ public class PharmacienDash extends javax.swing.JFrame {
     }// GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jButton8MouseClicked
+<<<<<<< HEAD
         new SellMedecine().setVisible(true);
+=======
+        new SellMedecine(email).setVisible(true);
+>>>>>>> fe8da9663614721aaddd875eb826e7226478c5d0
     }// GEN-LAST:event_jButton8MouseClicked
 
     /**
