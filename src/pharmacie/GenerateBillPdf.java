@@ -1,4 +1,5 @@
 package pharmacie;
+
 import com.itextpdf.text.Document;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -29,21 +30,22 @@ public class GenerateBillPdf {
                 // Utiliser bill_id comme nom de fichier PDF
                 String pdfFileName = billId + ".pdf";
 
-                PdfWriter.getInstance(doc, new FileOutputStream("C:\\Users\\abdelhamid\\Desktop\\Facture\\"+pdfFileName)); // Créer le PDF
+                PdfWriter.getInstance(doc,
+                        new FileOutputStream("C:\\Users\\Amine Aabid\\Desktop\\Facture" + pdfFileName)); // Créer le PDF
                 doc.open(); // Ouvrir le document
-                
+
                 // Ajouter le contenu au PDF
                 Paragraph header = new Paragraph("Pharmacy Management System");
                 header.setAlignment(Paragraph.ALIGN_CENTER);
                 doc.add(header);
 
-                Paragraph stars = new Paragraph("*************************************************************************");
+                Paragraph stars = new Paragraph(
+                        "*************************************************************************");
                 doc.add(stars);
 
                 Paragraph details = new Paragraph(String.format(
-                    "Bill ID: %d\nBill Date: %s\nTotal Paid: %d DH\nUser ID: %d",
-                    billId, billDate, totalPaid, userId
-                ));
+                        "Bill ID: %d\nBill Date: %s\nTotal Paid: %d DH\nUser ID: %d",
+                        billId, billDate, totalPaid, userId));
                 doc.add(details);
 
                 doc.close(); // Fermer le document

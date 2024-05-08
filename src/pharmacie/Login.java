@@ -41,7 +41,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // Code">
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -106,7 +106,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -340, 780, 1320));
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>
 
     private void txtemailActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtemailActionPerformed
         // TODO add your handling code here:
@@ -190,7 +190,7 @@ public class Login extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -198,5 +198,5 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField txtemail;
     private javax.swing.JPasswordField txtpass;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration
 }
