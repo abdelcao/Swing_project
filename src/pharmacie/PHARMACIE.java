@@ -14,7 +14,11 @@ public class PHARMACIE {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+<<<<<<< HEAD
         // TODO code application logic here  ya rien
+=======
+        // TODO code application logic here
+>>>>>>> 59e8d356a57c8d46e04ce57ec0cef3034f289429
     }
     
 }
